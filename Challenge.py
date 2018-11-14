@@ -1,5 +1,4 @@
 import my_module
-import SimpleGUICS2Pygame
 
 my_list = my_module.LinkedList()
 my_list.append("My first project")
