@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/2.7/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "test*.py"
+    ],
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+    "python.unitTest.unittestEnabled": false,
+    "python.unitTest.promptToConfigure": false
+}
