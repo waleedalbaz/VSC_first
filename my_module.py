@@ -92,3 +92,22 @@ def make_2d_grid(a_list, width, height, side=None):
             result += "| "+str(a_list[row][colum])+"| "
         result += "\n"
     print result
+
+
+def traverse_grid(a_list, start_cell, direction, num_steps):
+    """
+    Function that iterates through the cells in a grid
+    in a linear direction
+    
+    Both start_cell is a tuple(row, col) denoting the
+    starting cell
+    
+    direction is a tuple that contains difference between
+    consecutive cells in the traversal
+    """
+    
+    for step in range(num_steps):
+        row = start_cell[0] + step * direction[0]
+        col = start_cell[1] + step * direction[1]
+        print "Processing cell", (row, col), 
+        print "with value", a_list[row][col]
