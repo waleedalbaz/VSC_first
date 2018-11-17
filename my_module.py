@@ -80,13 +80,14 @@ class LinkedList():
 
 
 # ================= Functions =============
-def make_2d_grid(a_list, width, height):
+def make_2d_grid(a_list, width, height, side=None):
     """
     create a 2D grid (rows and columns)
     """
     result = ""
     for row in range(height):
-        result += str(LETTERS[row])+": "
+        if side is not None:
+            result += str(side[row])+": "
         for colum in range(width):
             result += "| "+str(a_list[row][colum])+"| "
         result += "\n"
