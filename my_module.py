@@ -77,3 +77,17 @@ class LinkedList():
                 self._len_ -= 1
                 return # out after erasing
             cur_idx += 1 # move th index one step
+
+
+# ================= Functions =============
+def make_2d_grid(a_list, width, height):
+    """
+    create a 2D grid (rows and columns)
+    """
+    result = ""
+    for row in range(height):
+        result += str(LETTERS[row])+": "
+        for colum in range(width):
+            result += "| "+str(a_list[row][colum])+"| "
+        result += "\n"
+    print result
