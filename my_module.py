@@ -110,14 +110,14 @@ def traverse_grid(a_list, start_cell, direction, num_steps):
         print "with value", a_list[row][col]
 
 
-def average(sum_array):
+def average(numbers):
     """
     compute the average of a sequence of numbers
 
-    :parm sum_array: iterable
+    :parm numbers: iterable
     :return: float
     """
-    result = sum(sum_array)/float(len(sum_array))
+    result = sum(numbers)/float(len(numbers))
     return result
 
 # ================= Test class =============
@@ -160,4 +160,3 @@ class TestSuite:
         msg = "Ran " + str(self.total_tests) + " tests. "
         msg += str(self.failures) + " failures."
         print msg
-               
