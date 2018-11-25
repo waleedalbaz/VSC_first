@@ -88,7 +88,7 @@ def make_2d_grid(a_list, width, height, side=None):
         for colum in range(width):
             result += "| "+str(a_list[row][colum])+"| "
         result += "\n"
-    print result
+    return result
 
 
 def traverse_grid(a_list, start_cell, direction, num_steps):
@@ -110,6 +110,15 @@ def traverse_grid(a_list, start_cell, direction, num_steps):
         print "with value", a_list[row][col]
 
 
+def average(sum_array):
+    """
+    compute the average of numbers
+
+    :parm sum_array: iterable
+    :return: float
+    """
+    result = sum(sum_array)/float(len(sum_array))
+    return result
 
 # ================= Test class =============
 """
