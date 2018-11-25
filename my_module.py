@@ -112,7 +112,7 @@ def traverse_grid(a_list, start_cell, direction, num_steps):
 
 def average(sum_array):
     """
-    compute the average of numbers
+    compute the average of a sequence of numbers
 
     :parm sum_array: iterable
     :return: float
