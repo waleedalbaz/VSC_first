@@ -120,6 +120,26 @@ def average(numbers):
     result = sum(numbers)/float(len(numbers))
     return result
 
+
+def expected_value(list_2d):
+    """
+    compute the expected value for a sequence of values and probabilities
+    
+    :parm list_2d: iterable (e.g: [(val1, prob1), (val2, prob2)... (valn, probn)] )
+    :return: float
+    """
+    error_margin = 0.001
+    total_prob = 0
+    value = 0
+    for item in list_2d:
+        total_prob += item[1]
+        value += (item[0] * item[1])
+    
+    if abs(total_prob-1) > error_margin:
+        return "Error: the sum of probabilities must be exactly one, not",total_prob
+    
+    return value
+
 # ================= Test class =============
 """
 Lightweight testing class inspired by unittest from Pyunit
