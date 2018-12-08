@@ -155,6 +155,20 @@ def fact(num):
 
     return result
 
+
+def combin(total, chosen):
+    """
+    compute combinations
+
+    :parm total:  the total number of items.
+    :parm chosen: the number of items being chosen at a time.
+    return: int
+    """
+    numerator = fact(total) 
+    denominator = fact(chosen) * fact(total - chosen)
+    
+    return numerator / denominator
+
 # ================= Test class =============
 """
 Lightweight testing class inspired by unittest from Pyunit
