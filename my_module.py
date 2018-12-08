@@ -121,24 +121,39 @@ def average(numbers):
     return result
 
 
-def expected_value(list_2d):
+def expected_value(list_2d, print_prob=False):
     """
     compute the expected value for a sequence of values and probabilities
     
     :parm list_2d: iterable (e.g: [(val1, prob1), (val2, prob2)... (valn, probn)] )
     :return: float
     """
-    error_margin = 0.001
+    #error_margin = 0.001
     total_prob = 0
     value = 0
     for item in list_2d:
         total_prob += item[1]
         value += (item[0] * item[1])
     
-    if abs(total_prob-1) > error_margin:
-        return "Error: the sum of probabilities must be exactly one, not",total_prob
+    if print_prob:
+        print "The sum of probabilities is "+str(total_prob*100)+"%"
     
     return value
+
+
+def fact(num):
+    """
+    compute the factorial of number
+
+    :parm num: the number
+    :return: int
+    """
+    if num == 0:
+        return 1
+    
+    result = num*fact(num-1)
+
+    return result
 
 # ================= Test class =============
 """
