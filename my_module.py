@@ -148,6 +148,8 @@ def fact(num):
     :parm num: the number
     :return: int
     """
+    if num < 0:
+        print "Error: factorial does not exist for negative numbers"
     if num == 0:
         return 1
     
@@ -156,18 +158,22 @@ def fact(num):
     return result
 
 
-def combin(total, chosen):
+def combin(total, chosen, repeatable=False):
     """
     compute combinations
 
     :parm total:  the total number of items.
     :parm chosen: the number of items being chosen at a time.
+    :parm repeatable: whether repetitions are allowed
     return: int
     """
-    numerator = fact(total) 
-    denominator = fact(chosen) * fact(total - chosen)
+    if not repeatable: # n!/r!(n-r)!
+        numerator = fact(total) 
+        denominator = fact(chosen) * fact(total - chosen)
+        return numerator / denominator
+
     
-    return numerator / denominator
+    return total**chosen # m^n
 
 # ================= Test class =============
 """
